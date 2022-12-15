@@ -53,14 +53,6 @@ namespace Vsxmd.Units
             content.Replace("`", @"\`", StringComparison.InvariantCulture);
 
         /// <summary>
-        /// Generate an anchor for the <paramref name="href"/>.
-        /// </summary>
-        /// <param name="href">The href.</param>
-        /// <returns>The anchor for the <paramref name="href"/>.</returns>
-        internal static string ToAnchor(this string href) =>
-            $"<a name='{href}'></a>\n";
-
-        /// <summary>
         /// Generate "to here" link for the <paramref name="href"/>.
         /// </summary>
         /// <param name="href">The href.</param>

@@ -75,8 +75,7 @@ namespace Vsxmd.Units
             ? Enumerable.Empty<string>()
             : new[]
             {
-                $"##### Namespace",
-                $"{this.name.Namespace}",
+                $"`{name.Namespace}`",
             };
 
         private IEnumerable<string> Summary =>
@@ -115,13 +114,13 @@ namespace Vsxmd.Units
                 .Concat(this.Namespace)
                 .Concat(this.InheritDoc)
                 .Concat(this.Summary)
-                .Concat(this.Returns)
+                .Concat(this.Remarks)
                 .Concat(this.Params)
+                .Concat(this.Returns)
                 .Concat(this.Typeparams)
                 .Concat(this.Exceptions)
                 .Concat(this.Permissions)
                 .Concat(this.Example)
-                .Concat(this.Remarks)
                 .Concat(this.Seealsos);
 
         /// <summary>

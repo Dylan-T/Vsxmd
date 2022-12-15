@@ -56,11 +56,11 @@ namespace Vsxmd
                 .SelectMany(group => group)
                 .OrderBy(member => member, MemberUnit.Comparer);
 
-            // table of contents
-            var tableOfContents = new TableOfContents(memberUnits);
+            // // table of contents
+            // var tableOfContents = new TableOfContents(memberUnits);
 
             return new IUnit[] { assemblyUnit }
-                .Concat(new[] { tableOfContents })
+                // .Concat(new[] { tableOfContents })
                 .Concat(memberUnits);
         }
     }
